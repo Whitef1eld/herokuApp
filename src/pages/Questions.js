@@ -13,7 +13,7 @@ const Questions = ({ logedin, name3, lastname3, id3, email3, answers3 }) => {
   };
   useEffect(() => {
     (async () => {
-      const response = await fetch("http://localhost:8080/api/questions", {
+      const response = await fetch("https://heroku-backend-nanda.herokuapp.com/api/questions", {
         headers: { "Content-Type": "application/json" },
       });
       const content = await response.json();
@@ -29,7 +29,7 @@ const Questions = ({ logedin, name3, lastname3, id3, email3, answers3 }) => {
   const submitHandler = async (id, question, thumbsup, e) => {
     e.preventDefault();
 
-    const response = await fetch("http://localhost:8080/api/answer", {
+    const response = await fetch("https://heroku-backend-nanda.herokuapp.com/api/answer", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -43,7 +43,7 @@ const Questions = ({ logedin, name3, lastname3, id3, email3, answers3 }) => {
 /*     setAnswerValue("");
  */    console.log(answer);
     const content = await response.json();
-    const response1 = await fetch("http://localhost:8080/api/update-answer", {
+    const response1 = await fetch("https://heroku-backend-nanda.herokuapp.com/api/update-answer", {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -58,7 +58,7 @@ const Questions = ({ logedin, name3, lastname3, id3, email3, answers3 }) => {
 
   const submitQuestion = async (e) => {
     e.preventDefault();
-    const response = await fetch("http://localhost:8080/api/questions", {
+    const response = await fetch("https://heroku-backend-nanda.herokuapp.com/api/questions", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -68,7 +68,7 @@ const Questions = ({ logedin, name3, lastname3, id3, email3, answers3 }) => {
     });
     const content = await response.json();
     console.log(content);
-    const response1 = await fetch("http://localhost:8080/api/my-questions", {
+    const response1 = await fetch("https://heroku-backend-nanda.herokuapp.com/api/my-questions", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -94,7 +94,7 @@ const Questions = ({ logedin, name3, lastname3, id3, email3, answers3 }) => {
   };
   const questionHandler = async (q, e) => {
     e.preventDefault();
-    await fetch("http://localhost:8080/api/thumbsup", {
+    await fetch("https://heroku-backend-nanda.herokuapp.com/api/thumbsup", {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

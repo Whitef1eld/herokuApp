@@ -6,7 +6,7 @@ const Navbar = ({ setLogedin, logedin, setWrongmessage }) => {
   let menu;
 
   const logout = async () => {
-    await fetch("http://localhost:8080/api/logout", {
+    await fetch("https://heroku-backend-nanda.herokuapp.com/api/logout", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       credentials: "include",
