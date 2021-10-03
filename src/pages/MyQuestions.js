@@ -10,7 +10,7 @@ const MyQuestions = ({ id }) => {
   }; */
   useEffect(() => {
     (async () => {
-      const response = await fetch("https://heroku-backend-nanda.herokuapp.com/api/user", {
+      const response = await fetch("https://heroku-backend-nanda.herokuapp.com:8080/api/user", {
         headers: { "Content-Type": "application/json" },
         credentials: "include",
       });

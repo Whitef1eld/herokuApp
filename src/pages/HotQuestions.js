@@ -26,7 +26,7 @@ const HotQuestions = () => {
 
   useEffect(() => {
     (async () => {
-      const response = await fetch("https://heroku-backend-nanda.herokuapp.com/api/questions", {
+      const response = await fetch("https://heroku-backend-nanda.herokuapp.com:8080/api/questions", {
         headers: { "Content-Type": "application/json" },
       });
       const content = await response.json()
@@ -40,7 +40,7 @@ const HotQuestions = () => {
   
   const questionHandler = async (q, e) => {
     e.preventDefault()
-    await fetch("https://heroku-backend-nanda.herokuapp.com/api/thumbsup",{
+    await fetch("https://heroku-backend-nanda.herokuapp.com:8080/api/thumbsup",{
       method: 'PUT',
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

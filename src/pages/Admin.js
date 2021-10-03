@@ -24,7 +24,7 @@ const Admin = ({
       password: password1,
     };
     console.log(name1, lastname1, email1, password1);
-    const response = await fetch("https://heroku-backend-nanda.herokuapp.com/api/admin", {
+    const response = await fetch("https://heroku-backend-nanda.herokuapp.com:8080/api/admin", {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       credentials: "include",

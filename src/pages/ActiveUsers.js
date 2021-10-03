@@ -7,7 +7,7 @@ function ActiveUsers() {
   
   useEffect(() => {
     (async () => {
-      const response = await fetch("https://heroku-backend-nanda.herokuapp.com/api/active-users", {
+      const response = await fetch("https://heroku-backend-nanda.herokuapp.com:8080/api/active-users", {
         headers: { "Content-Type": "application/json" },
       });
       const content = await response.json()

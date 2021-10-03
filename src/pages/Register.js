@@ -12,7 +12,7 @@ function Register() {
   const submitHandler = async (e) => {
     e.preventDefault();
 
-    await fetch("https://heroku-backend-nanda.herokuapp.com/api/register", {
+    await fetch("https://heroku-backend-nanda.herokuapp.com:8080/api/register", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
